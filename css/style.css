@@ -716,7 +716,7 @@ a:hover {
 }
 .news-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
   gap: 32px 25px;
 }
 .news-item a:hover {
@@ -979,19 +979,40 @@ a:hover {
   padding: 100px 0 20px;
   text-align: center;
 }
+.foodMenu-flexbox {
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-lg);
+}
+.foodMenu h2 {
+  margin-bottom: var(--space-sm);
+}
 .foodMenu h3 {
   font-size: 14px;
   margin-bottom: 20px;
 }
+.drink-images {
+  margin: auto;
+}
+.drink-images img {
+  max-width: 200px;
+  width: 100%;
+}
+.drink-text > li {
+  margin-bottom: var(--space-sm);
+  text-align: left;
+  font-weight: bold;
+}
 .card-price {
   font-size: 1rem;
   font-weight: bold;
+  text-align: left;
 }
 .card-desc {
   font-size: 14px;
   font-weight: bold;
   padding-top: 15px;
   margin-top: auto;
+  text-align: left;
 }
 .foodMenu .card-body {
   display: flex;
@@ -1015,13 +1036,30 @@ a:hover {
   font-size: 14px;
   margin-bottom: 10px;
 }
+.alcohol h3 {
+  font-size: var(--heading2);
+}
 @media (min-width: 768px) {
   .foodMenu .gridContainer {
     grid-template-columns: repeat(3, 1fr);
   }
+  .drink-images > .gridContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .drink-images {
+    margin-top: 0;
+    margin-right: 20px;
+  }
+  .alcohol .drink-text {
+    margin-top: 20px;
+  }
   .foodMenu h3 {
     font-size: 16px;
     text-align: left;
+  }
+  .alcohol h3 {
+    text-align: center;
+    font-size: var(--heading2);
   }
   .card-price {
     font-size: 20px;
@@ -1043,6 +1081,25 @@ a:hover {
 @media (min-width: 1024px) {
   .foodMenu .gridContainer {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .drink-images > .gridContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .alcohol .drink-images {
+    margin-top: 40px;
+  }
+  .alcohol .drink-text {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .drink-images > .gridContainer {
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+  .foodMenu .drink-text {
+    margin-top: 20px;
+    margin-bottom: 0;
   }
 }
 /* 施設紹介 */
@@ -1087,7 +1144,6 @@ a:hover {
     width: 300px;
   }
 }
-
 /* 20230319TOP用NEWS */
 .desc-text_news {
   text-align: left;
@@ -1098,6 +1154,6 @@ a:hover {
 }
 @media screen and (min-width: 768px) {
   .desc-text_news {
-    text-align:center;
+    text-align: center;
   }
 }
